@@ -79,6 +79,12 @@ systemctl restart sshd chronyd nginx php-fpm mariadb
 
 
 
+dnf install policycoreutils-python-utils -y
+
+# 허용할 포트 추가
+semanage port -a -p tcp -t ssh_port_t 8025
+
+
 # redis 5버전 현재최신 6버전
 
 

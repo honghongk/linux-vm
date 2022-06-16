@@ -1,0 +1,3 @@
+2ff8d2330087
+time="2022-06-16T13:54:06+09:00" level=warning msg="The input device is not a TTY. The --tty and --interactive flags might not work properly"
+30a8b418eea9

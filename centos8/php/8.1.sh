@@ -1,4 +1,9 @@
 #!/bin/sh
+if [[ "$BASH_SOURCE" == "$0" ]]; then
+    pwd=`pwd`
+else
+    pwd=`dirname $BASH_SOURCE`
+fi
 
 # epel 없으면 설치
 epel=`dnf repolist epel`
@@ -13,7 +18,7 @@ dnf install php php-mysqlnd php-fpm php-json php-pdo php-yaml php-xml php-zip -y
 
 
 # config 덮어쓰기
-config=`dirname $BASH_SOURCE`/config.ini
+config=$pwd/config.ini
 
 cat $config > /etc/php.ini
 

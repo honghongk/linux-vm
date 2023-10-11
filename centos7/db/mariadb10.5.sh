@@ -1,6 +1,9 @@
 #!/bin/sh
 
 
+# libc++ 에러 보완
+yum clean all
+
 # 레포지토리 추가
 cat << EOF > /etc/yum.repos.d/mariadb.repo
 # MariaDB 10.5 CentOS repository list - created 2021-03-22 07:20 UTC
